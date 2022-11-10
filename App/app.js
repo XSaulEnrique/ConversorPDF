@@ -20,11 +20,7 @@ let signaturePad = null;
 
 window.addEventListener('load', async () => {
 
-    const canvas = document.querySelector("canvas");
-    canvas.height = canvas.offsetHeight;
-    canvas.width = canvas.offsetWidth;
-
-    signaturePad = new SignaturePad(canvas, {});
+   
 
     const form = document.querySelector('#form');
     form.addEventListener('submit', (e) => {
@@ -40,7 +36,7 @@ window.addEventListener('load', async () => {
 
 async function generatePDF(curso, nombres) {
     const image = await loadImage("certificado.jpg");
-    const signatureImage = signaturePad.toDataURL();
+    
 
     const pdf = new jsPDF('p', 'pt', 'letter');
 
