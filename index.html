@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de investigacion</title>
+    <link rel="stylesheet" href="Styles/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="shortcut icon" href="https://i.ibb.co/FKCXPVh/logo-reporte.png" type="image/x-icon">
+
+
+
+
+</head>
+
+<body>
+
+    <header class="containere">
+        <a class="logo" href="#">
+            <img src="https://i.ibb.co/dfM9pcD/new-logo-utp.png" alt="logo"></a>
+        <h2 class="titulo">Portal de emision de Certificados</h2>
+    </header>
+
+
+
+    <main class="contenedor  sombra">
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Proceso de emision</h3>
+                    <hr>
+                    <form id="form">
+                        <div class="mb-3">
+                            <label for="curso" class="form-label">Curso al que aspiro</label>
+                            <select class="form-select form-select-lg" id="curso">
+                                <option value="">Seleccione un curso</option>
+                                <option value="Desarrollo de aplicaciones web">Desarrollo de aplicaciones web</option>
+                                <option value="Desarrollo de aplicaciones moviles">Desarrollo de aplicaciones moviles
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="nombre" class="form-label">Nombres</label>
+                                <input type="text" class="form-control form-control-lg" id="nombre">
+                            </div>
+
+                        </div>
+
+
+
+
+                        <button type="submit" class="btn btn-primary btn-lg mb-4">Generar PDF</button>
+                        <input type="button" class="btn btn-danger btn-lg mb-4" onclick="limpiarFormulario()"
+                            value="Limpiar campos">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="App/jspdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+    <script src="App/app.js"></script>
+    <script src="App/clean.js"></script>
+</body>
+
+</html>
