@@ -29,13 +29,14 @@ window.addEventListener('load', async () => {
         let universidad = document.getElementById('universidad').value;
         let nombres = document.getElementById('nombre').value;
         let carrera = document.getElementById('carrera').value;
+        let transaccion = document.getElementById('transaccion').value;
 
-        generatePDF(universidad, nombres, carrera);
+        generatePDF(universidad, nombres, carrera,transaccion);
     })
 
 });
 
-async function generatePDF(universidad, nombres,carrera) {
+async function generatePDF(universidad, nombres,carrera,transaccion) {
     const image = await loadImage("certificado.jpg");
 
 
@@ -54,6 +55,7 @@ async function generatePDF(universidad, nombres,carrera) {
 
     pdf.setFontSize(10);
     pdf.text(nombres, 270, 325);
+    pdf.text(transaccion, 300, 700);
 
 
     pdf.setFillColor(0, 0, 0);
