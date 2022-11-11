@@ -20,31 +20,32 @@ let signaturePad = null;
 
 window.addEventListener('load', async () => {
 
-   
+
 
     const form = document.querySelector('#form');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        let curso = document.getElementById('curso').value;
+        let universidad = document.getElementById('universidad').value;
         let nombres = document.getElementById('nombre').value;
-       
-        generatePDF(curso, nombres);
+        let carrera = document.getElementById('carrera').value;
+
+        generatePDF(universidad, nombres, carrera);
     })
 
 });
 
-async function generatePDF(curso, nombres) {
+async function generatePDF(universidad, nombres,carrera) {
     const image = await loadImage("certificado.jpg");
-    
+
 
     const pdf = new jsPDF('p', 'pt', 'letter');
 
-     pdf.addImage(image, 'PNG', 0, 0, 630, 792);
+    pdf.addImage(image, 'PNG', 0, 0, 630, 792);
 
 
     pdf.setFontSize(12);
-    pdf.text(curso, 235, 480);
+    pdf.text(carrera, 235, 480);
 
     const date = new Date();
     pdf.text(date.getUTCDate().toString(), 270, 515);
@@ -52,7 +53,7 @@ async function generatePDF(curso, nombres) {
     pdf.text(date.getUTCFullYear().toString(), 340, 515);
 
     pdf.setFontSize(10);
-    pdf.text(nombres, 270   , 325);
+    pdf.text(nombres, 270, 325);
 
 
     pdf.setFillColor(0, 0, 0);

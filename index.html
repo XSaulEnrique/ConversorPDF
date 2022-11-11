@@ -34,25 +34,36 @@
                     <h3>Proceso de emision</h3>
                     <hr>
                     <form id="form">
+
+
+                        <!-- Universidad -->
                         <div class="mb-3">
-                            <label for="curso" class="form-label">Curso al que aspiro</label>
-                            <select class="form-select form-select-lg" id="curso">
-                                <option value="">Seleccione un curso</option>
-                                <option value="Desarrollo de aplicaciones web">Desarrollo de aplicaciones web</option>
-                                <option value="Desarrollo de aplicaciones moviles">Desarrollo de aplicaciones moviles
-                                </option>
+                            <label for="universidad" class="form-label">Datos:</label>
+                            <select class="form-select form-select-lg" id="universidad">
+                                <option value="">Seleccione la institucion educativa</option>
+                                <option value="Universidad Tecnologica del peru">Universidad Tecnologica del peru</option>
                             </select>
                         </div>
 
+                        <!-- Nombres y apellidos -->
                         <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="nombre" class="form-label">Nombres</label>
+                                <label for="nombre" class="form-label">Nombres y apellidos</label>
                                 <input type="text" class="form-control form-control-lg" id="nombre">
                             </div>
-
                         </div>
 
 
+                        <!-- Carrera-->
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="carrera" class="form-label">Carrera</label>
+                                <input type="text" class="form-control form-control-lg" id="carrera">
+                            </div>
+                        </div>
+
+
+                        <!-- Fecha se Autogenera -->
 
 
                         <button type="submit" class="btn btn-primary btn-lg mb-4">Generar PDF</button>
