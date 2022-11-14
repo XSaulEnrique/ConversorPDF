@@ -36,14 +36,15 @@
                     <form id="form">
 
 
-                        <!-- Universidad -->
-                        <div class="mb-3">
-                            <label for="universidad" class="form-label">Datos:</label>
-                            <select class="form-select form-select-lg" id="universidad">
-                                <option value="">Seleccione la institucion educativa</option>
-                                <option value="Universidad Tecnologica del peru">Universidad Tecnologica del peru</option>
-                            </select>
+                           <!--Universidad-->
+                           <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="universidad" class="form-label">Universidad</label>
+                                <input type="text" class="form-control form-control-lg" id="universidad">
+                            </div>
                         </div>
+
+            
 
                         <!-- Nombres y apellidos -->
                         <div class="row mb-3">
@@ -62,17 +63,21 @@
                             </div>
                         </div>
 
-                         <!-- ID-->
+                         <!-- Fecha-->
                          <div class="row mb-3">
                             <div class="col-md-6">
-                                <label for="transaccion" class="form-label">ID Transaccion</label>
-                                <input type="text" class="form-control form-control-lg" id="transaccion">
+                                <label for="fecha" class="form-label">Fecha</label>
+                                <input type="date" class="form-control form-control-lg" id="fecha">
                             </div>
                         </div>
 
-
-                        <!-- Fecha se Autogenera -->
-
+                            <!-- HASH-->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="transaccion" class="form-label">ID Transaccion</label>
+                                    <input type="text" class="form-control form-control-lg" id="transaccion">
+                                </div>
+                            </div>
 
                         <button type="submit" class="btn btn-primary btn-lg mb-4">Generar PDF</button>
                         <input type="button" class="btn btn-danger btn-lg mb-4" onclick="limpiarFormulario()"

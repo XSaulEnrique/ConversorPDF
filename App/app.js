@@ -29,14 +29,15 @@ window.addEventListener('load', async () => {
         let universidad = document.getElementById('universidad').value;
         let nombres = document.getElementById('nombre').value;
         let carrera = document.getElementById('carrera').value;
+        let fecha = document.getElementById('fecha').value;
         let transaccion = document.getElementById('transaccion').value;
 
-        generatePDF(universidad, nombres, carrera,transaccion);
+        generatePDF(universidad, nombres, carrera,fecha,transaccion);
     })
 
 });
 
-async function generatePDF(universidad, nombres,carrera,transaccion) {
+async function generatePDF(universidad, nombres,carrera,fecha,transaccion) {
     const image = await loadImage("certificado.jpg");
 
 
@@ -48,13 +49,11 @@ async function generatePDF(universidad, nombres,carrera,transaccion) {
     pdf.setFontSize(12);
     pdf.text(carrera, 235, 480);
 
-    const date = new Date();
-    pdf.text(date.getUTCDate().toString(), 270, 515);
-    pdf.text((date.getUTCMonth() + 1).toString(), 310, 515);
-    pdf.text(date.getUTCFullYear().toString(), 340, 515);
-
+    
     pdf.setFontSize(10);
-    pdf.text(nombres, 270, 325);
+    pdf.text(universidad, 270, 325);
+    pdf.text(nombres, 270, 350);
+    pdf.text(fecha, 270, 375);
     pdf.text(transaccion, 300, 700);
 
 
