@@ -47,14 +47,14 @@ async function generatePDF(universidad, nombres,carrera,fecha,transaccion) {
 
 
     pdf.setFontSize(12);
-    pdf.text(carrera, 235, 480);
+    pdf.text(carrera, 285, 480);
 
     
     pdf.setFontSize(10);
-    pdf.text(universidad, 270, 325);
+    pdf.text(universidad, 170, 600);
     pdf.text(nombres, 270, 350);
-    pdf.text(fecha, 270, 375);
-    pdf.text(transaccion, 300, 700);
+    pdf.text(fecha, 300, 700 );
+    pdf.text(transaccion, 110, 170);
 
 
     pdf.setFillColor(0, 0, 0);
